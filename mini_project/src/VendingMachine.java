@@ -28,8 +28,10 @@ public class VendingMachine {
     }
 
 }
-import java.util.Arrays;
+
 import java.util.Scanner;
+
+
 
 public class VendingMachine {
     static ArrayList<String>produits=new ArrayList<>(Arrays.asList("Eau","Soda","Chips","Chocolat"));
@@ -54,7 +56,7 @@ public class VendingMachine {
                     afficherProduits();
                     break;
                 case 2:
-                    //acheter produit();
+                    achete();
                     break;
                 case 3:
 
@@ -75,5 +77,22 @@ public class VendingMachine {
     }
     }
 
+public class VendingMachine{
+    public static void montant(int n){
+        Scanner input = new  Scanner(System.in);
+        System.out.println("entre votre montant: ");
+        int m = input.nextInt();
+        if(n == m) {
+            System.out.println("achete success!");
+            stock.set(n)--;
+        } else if (n < m) {
+            System.out.println("Monnaie rendue : "+(m-n)+" MAD");
+            System.out.println("achete success!");
+            stock.set(n)--;
+        }else{
+            System.out.println("invalid! Monnaie rendue : "+ m +" MAD");
+        }
+    }
 
 
+}
