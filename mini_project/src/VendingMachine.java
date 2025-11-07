@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class VendingMachine {
     static ArrayList<String>produits=new ArrayList<>(Arrays.asList("Eau","Soda","Chips","Chocolat"));
+
     static ArrayList<Double>prix=new ArrayList<>(Arrays.asList(5.0,8.0,12.0,15.0));
     static ArrayList<Integer>stock=new ArrayList<>(Arrays.asList(10,5,7,3));
+
     static Scanner sc=new Scanner(System.in);
 
     public static void main(String[]args){
