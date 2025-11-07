@@ -28,6 +28,7 @@ public class VendingMachine {
                     //acheter produit();
                     break;
                 case 3:
+
                     System.out.println("A bientot");
                     break;
                 default:
