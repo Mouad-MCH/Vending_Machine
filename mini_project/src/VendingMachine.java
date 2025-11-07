@@ -1,13 +1,30 @@
-public class VendingMachine {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.ArrayList;
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class VendingMachine {
+    public static void achete(){
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < produit.size(); i++){
+            affiche(i);
+        }
+        System.out.println("entre le produit tu veux achete: ");
+        String nom = input.nextLine();
+        int i = -1;
+        for(String elmnt : Produit){
+           i++;
+           if (elmnt == nom)
+               break;
+        }
+        if(verifie(i) == 1){
+            montant(prix.get(i));
         }
     }
+    public static int verifie(int n){
+        if(stock.get(n) =< 0) {
+            System.out.println("ce produit expire!");
+            return 0;
+        }
+        return 1;
+    }
+
 }
